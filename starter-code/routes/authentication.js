@@ -17,7 +17,8 @@ router.get('/signup', ensureLoggedOut(), (req, res) => {
     res.render('authentication/signup', { message: req.flash('error')});
 });
 
-router.post('/signup', ensureLoggedOut(), passport.authenticate('local-signup', {
+const uploadCloud = require('../config/cloudinary.js');
+router.post('/signup', ensureLoggedOut(), uploadCloud.single('profilePic'), passport.authenticate('local-signup', {
   successRedirect : '/',
   failureRedirect : '/signup',
   failureFlash : true
