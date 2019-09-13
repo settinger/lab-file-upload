@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    {{ message }}
+    <div class="col-sm-6 centered-form">
+      <form action="/post/newpost" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="post-content">Post content</label>
+          <textarea name="post-content" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="pic-upload">Upload picture:</label>
+          <input type="file" name="post-picture" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="pic-name">Picture name</label>
+          <input type="text" name="pic-name" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Post</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,9 @@
 <h1>Welcome to IronTumblr</h1>
+
+{{#each posts}}
+  {{this.content}}
+  <br/>
+  <img src="{{this.picPath}}" width="50%" alt="{{this.picName}}">
+  <br/>
+  Posted by: {{this.creator}} <img src="{{this.pfp}}" width="16%"/>
+{{/each}}
